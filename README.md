@@ -1,55 +1,11 @@
-# O'Vacances - Back
-
-## pour installer symfony
-Installer Symfony CLI via la commande
-```
-wget https://get.symfony.com/cli/installer -O - | bash
-```
-Puis rendre l'installation globale
-```
-mv /home/etudiant/.symfony/bin/symfony /usr/local/bin/symfony
-```
-
-Dans le dossier `o-vacances/back`, installer les dépendances via le terminal
-```
-composer install
-```
-
-## pour avoir la BDD penser à créer le fichier .env.local à la racine du dossier `back` en modifiant les informations user - password et db_name de la commande suivante, correspondant à votre accès adminer/PhpMyAdmin
-### Fichier .env.local
-`DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7`
-
-## Puis dans le terminal
-
-### Création de la BDD: 
-```
-php bin/console doctrine:database:create
-```
-
-### Conception des tables:
-```
-php bin/console doctrine:migrations:migrate
-```
-
-### Si la migration ne fonctionne pas faire les démarches suivantes
-Dans le fichier:
-    `vendor\doctrine\migrations\lib\Doctrine\Migrations\Metadata\Storage\TableMetadataStorage.php`
-    
-**Commenter les lignes 191->195**
-
-## Faire la migration:
-```
-php bin/console doctrine:migrations:migrate
-```
-Puis decommenter les lignes précédentes (191->195)
-
-### Chargements des fixtures 
-```
-php bin/console doctrine:fixtures:load
-```
-
-### Lancement du serveur
-Toujours dans le dossier "back":
-```
-symfony server:start
-```
+![Image1](https://user-images.githubusercontent.com/60963159/137767476-694ddb65-d379-4fc8-97d2-44056a1f9667.png)
+![Image2](https://user-images.githubusercontent.com/60963159/137767513-da819f0f-9c7b-46cd-8c94-93e3637c9887.png)
+![Image3](https://user-images.githubusercontent.com/60963159/137767515-d7e354ae-ba60-4ddd-8bb9-b4b261846246.png)
+![Image4](https://user-images.githubusercontent.com/60963159/137767521-110e5d55-bdc8-4023-bf6a-1bb4dda4a69b.png)
+![Image5](https://user-images.githubusercontent.com/60963159/137767523-c9cf8872-c0fd-445f-b96a-6599f58f3698.png)
+![Image6](https://user-images.githubusercontent.com/60963159/137767545-822d3bd9-883d-4dc5-9029-1805438be7bf.png)
+![Image7](https://user-images.githubusercontent.com/60963159/137767577-45cee854-9e74-4ff4-9974-b113ec70577a.png)
+![Image8](https://user-images.githubusercontent.com/60963159/137767579-90e27690-08b2-452a-af5b-2fe40dabcddd.png)
+![Image9](https://user-images.githubusercontent.com/60963159/137767582-20708d74-22d0-48ba-a53a-e9ad64c49dc0.png)
+![Image10](https://user-images.githubusercontent.com/60963159/137767584-50f00e3e-2b27-4e01-87a6-a44e77501bb4.png)
+![Image11](https://user-images.githubusercontent.com/60963159/137767589-2ed71f06-81be-4a6e-bcb6-23ebc5392236.png)
